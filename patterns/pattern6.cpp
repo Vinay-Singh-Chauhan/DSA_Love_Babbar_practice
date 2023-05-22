@@ -3,13 +3,6 @@
 // 1 2 3 * * * * 3 2 1 
 // 1 2 * * * * * * 2 1 
 // 1 * * * * * * * * 1 
-"e:\Coding\DSA_practice\Love_Babbar\patterns\" ; if ($?) { g++ pattern6.cpp -o pattern6 } ; if ($?) { .\pattern6 }
-5
-1234554321
-1234**4321
-123****321
-12******21
-1********1
 
 #include<bits/stdc++.h>
 using namespace std;
