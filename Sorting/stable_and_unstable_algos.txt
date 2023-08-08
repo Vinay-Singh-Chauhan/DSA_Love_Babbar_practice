@@ -1,0 +1,3 @@
+Stability is mainly essential when we have key-value pairs with duplicate keys possible (like people’s names as keys and their details as values). And we wish to sort these objects by keys.
+
+A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set

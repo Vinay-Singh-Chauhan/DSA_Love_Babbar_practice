@@ -1,0 +1,3 @@
+In-place sorting means sorting without any extra space requirement.
+
+In-place algorithm is an algorithm which transforms input using a data structure with a small, constant amount of extra storage space.
