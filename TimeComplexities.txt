@@ -1,0 +1,11 @@
+O(N!)           ^
+O(2^N)          |
+O(N^3)          |
+O(N^2)          |   increasing time complexity
+O(NlogN)        | 
+O(N)            |
+O(logN)         |
+O(1)            |
+
+
+10^8 ==> 1 sec

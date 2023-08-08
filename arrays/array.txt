@@ -1,0 +1,24 @@
+int arr[100]={0}; ============works
+int arr[100]={1}; ============ does not work {1,0,0..................0,0,0,0}
+use memset
+int arr[100]={2,7}; ============ {2,7,0,0,0,0,0,0,0,0..................0,0,0,0}
+in case of array pass by value also updates original array============ since its address is passed
+
+we can calculate size of entire array using sizeof()== sizeof(array)/sizeof(datatype)
+
+with reference to question 442 [LeetCode]
+ The basic idea is to use a HashMap to solve the problem. But there is a catch, the numbers in the array are from 0 to n-1, and the input array has length n. So, the input array can be used as a HashMap. While Traversing the array, if an element ‘a’ is encountered then increase the value of a%n‘th element by n. The frequency can be retrieved by dividing the a % n’th element by n.
+
+ eg: vector<int> findDuplicates(vector<int>& nums) {
+        vector<int>ans;
+        int n=nums.size();
+        for(int i=0;i<nums.size();i++){
+            nums[(nums[i]-1)%n]=nums[(nums[i]-1)%n]+n;
+        }
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]>2*n){
+                ans.push_back(i+1);
+            }
+        }
+        return ans;
+    }
