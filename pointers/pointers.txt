@@ -1,0 +1,46 @@
+1. The size of pointer is machine dependent usually it is 8B or 4B
+
+2. Incrementing a pointer increments it by size of datatype it points  not by size of pointer
+
+3. Three ways of getting address if first memory block is: 
+    i. name of the array
+    ii. &arr[0]
+    iii. &arr
+
+4. Peculiar formula: arr[i] is equal to *(arr +i). similarly i[arr] equals to expression *(i+arr) thus giving ith element of array arr and not error.
+
+5. Peculiarity of sizeof(): int *ptr=1; and int arr[10] sizeof(ptr) gives 8 and sizeof(arr) gives (size of array) i.e length*datatype_size
+
+6. int arr[10];
+    arr=arr+1       gives error
+but
+    int *p=&arr[10];
+    p=p+1           does not
+
+7. for functions: fun(int[]) is same as fun(int *)
+
+8. arr is as same as &arr is same as &arr[0]
+
+
+10. Worst way to initialize pointer is to not initializing it:
+    int *p;
+    //this will point to a random garbage location and updating it may result in dangerous consequences.
+    
+either do following :
+    int *p =nullptr;
+
+or 
+    int *p=NULL;
+
+or 
+    int *p=0;
+
+in any case accessing a null pointer with out updating with a valid address results in segmentation fault
+
+like:
+    int *p=0;
+    *p=10; //error
+but:
+    int *p=0;
+    p=&i;
+    *p=10; //no error
